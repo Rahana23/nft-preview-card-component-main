@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --softblue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --mainbackground: hsl(217, 54%, 11%);
+    --cardbackground: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%)
+}
+
+body{
+    background-color: var(--mainbackground);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    color: var(--white);
+}
+
+.card{
+    background-color: var(--cardbackground);
+    width: 275px;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.image{
+    position: relative;
+}
+
+.mainImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+h3{
+    font-size: 20px;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+.description{
+    font-weight: 300;
+    color: var(--softblue);
+    line-height: 28px;
+    margin: 0.6rem 0 1rem 0;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.eth{
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.eth img{
+    margin-right: 5px;
+}
+
+.days{
+    display: flex;
+    align-items: center;
+    color: var(--softblue);
+    font-size: 15px;
+}
+
+.days img{
+    margin-right: 5px;
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 15px;    
+}
+
+.avatar{
+    width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+span{
+    color: var(--white);
+    margin-left: 5px;
+}
+
+.mainImg, h3, span{
+    cursor: pointer;
+}
+
+h3:hover, span:hover{
+    color: var(--cyan);
+}
+
+.image div{
+    position: absolute;
+    top: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.image div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image:hover div{
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 375px){
+    .card{
+        width: 300px;
+    }   
+    
+}
